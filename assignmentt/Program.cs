@@ -78,23 +78,28 @@ namespace assignmentt
             StreamReader reader = null;
             if (option == 1)
             {
-                filepath = @"C:\Users\CORELAB-USER\Desktop\experience.csv";
+                //filepath = @"C:\Users\CORELAB-USER\Desktop\experience.csv";
+                filepath = @"C:\Users\girisha\OneDrive\Desktop\exp.csv";
             }
             else if(option == 2) 
             {
-                filepath = @"C:\Users\CORELAB-USER\Desktop\education.csv";
+                //filepath = @"C:\Users\CORELAB-USER\Desktop\education.csv";
+                filepath = @"C:\Users\girisha\OneDrive\Desktop\edu.csv";
             }
             else if(option ==3)
             {
-                filepath = @"C:\Users\CORELAB-USER\Desktop\skills.csv";
+                //filepath = @"C:\Users\CORELAB-USER\Desktop\skills.csv";
+                filepath = @"C:\Users\girisha\OneDrive\Desktop\skills.csv";
             }
             else if(option == 4)
             {
-                filepath = @"C:\Users\CORELAB-USER\Desktop\techskills.csv";
+                //filepath = @"C:\Users\CORELAB-USER\Desktop\techskills.csv";
+                filepath = @"C:\Users\girisha\OneDrive\Desktop\techskills.csv";
             }
             else
             {
-                filepath = @"C:\Users\CORELAB-USER\Desktop\contact.csv";
+                //filepath = @"C:\Users\CORELAB-USER\Desktop\contact.csv";
+                filepath = @"C:\Users\girisha\OneDrive\Desktop\contact.csv";
             }
 
             if (File.Exists(filepath))
@@ -146,42 +151,40 @@ namespace assignmentt
                     {
                         //whatyouwannado:
                         Console.WriteLine("enter the number associated with the menu you want to view:");
-                        int option = int.Parse(Console.ReadLine());
-
-                        while (true)
-                        {
+                        //int option = int.Parse(Console.ReadLine());
+                        char option = Console.ReadLine()[0];
 
                             switch (option)
                             {
-                                case 0:
+                                case '0':
                                     //Menu();
                                     goto Loop;
 
-                                case 1:
+                                case '1':
                                     Console.WriteLine(".....Experience.....");
                                     todo(1);
                                     //Menu();
                                     break;
 
-                                case 2:
+                                case '2':
                                     Console.WriteLine("....Education/training.....");
                                     todo(2);
                                     //Menu();
                                     break;
 
-                                case 3:
+                                case '3':
                                     Console.WriteLine(".....skills.....");
                                     todo(3);
                                     //Menu();
                                     break;
 
-                                case 4:
+                                case '4':
                                     Console.WriteLine(".....techinical skills.....");
                                     todo(4);
                                     //Menu();
                                     break;
 
-                                case 5:
+                                case '5':
                                     Console.WriteLine("......Contact.....");
                                     todo(5);
                                     //Menu();
@@ -192,9 +195,9 @@ namespace assignmentt
                                     break;
                             }
                             Menu();
-                        }
+                        
 
-                        goto Loop;
+                        //goto Loop;
                     }
                 }
 
@@ -202,7 +205,9 @@ namespace assignmentt
                 {
                     Console.WriteLine("Hello. You are on admin mode.");
 
-                }          
+                }
+                
+
             }
         }   
     }
