@@ -7,7 +7,7 @@ namespace assignmentt
 {
     class Program
     {
-        public static void Menu()
+       /* public static void Menu()
         {
             Console.WriteLine();
             Console.WriteLine("********menu**********");
@@ -19,7 +19,7 @@ namespace assignmentt
             Console.WriteLine("     0.Go Back");
             Console.WriteLine("**********************");
             Console.WriteLine();
-        }
+        }*/
 
         public static void todo(int option)
         {
@@ -27,8 +27,9 @@ namespace assignmentt
             StreamReader reader = null;
             if (option == 1)
             {
-                filepath = @"C:\Users\CORELAB-USER\Desktop\experience.csv";
+                //filepath = @"C:\Users\CORELAB-USER\Desktop\experience.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\exp.csv";
+                filepath = @"C:\Users\CORELAB-USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\experience.csv";
             }
             else if (option == 2)
             {
@@ -82,19 +83,33 @@ namespace assignmentt
 
                 if (string.Equals("g", mode, StringComparison.OrdinalIgnoreCase))
                 {
-                    Guest.Sa_guest(mode);
-                    Console.WriteLine("enter the number associated with the menu you want to view:");
-                    char option = Console.ReadLine()[0];
-
-                    Guest.KipuFr(option);
-
-                    if (string.Equals("a", mode, StringComparison.OrdinalIgnoreCase))
+                    char option;
+                    do
                     {
-                        //Admin.Sa_Admin(mode);
-                    }
+                        Guest.Guest_Main(mode);
 
+                        Console.WriteLine("enter the number associated with the menu you want to view:");
+                        option = Console.ReadLine()[0];
+
+                        Guest.Guest_Menu(option);
+                    } while (option != '0');
                 }
+                 
+                
 
+                if (string.Equals("a", mode, StringComparison.OrdinalIgnoreCase))
+                {
+                    char option;
+                    do
+                    { 
+                        Admin.Admin_Main(mode);
+
+                        Console.WriteLine("enter the number associated with the menu you want to view:");
+                        option = Console.ReadLine()[0];
+
+                        Admin.Admin_Menu(option);
+                    } while (option != '0');
+                }
 
             }
         }
