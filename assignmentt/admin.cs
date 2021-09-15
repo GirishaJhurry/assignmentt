@@ -10,11 +10,11 @@ namespace assignmentt
         {
             Console.WriteLine();
             Console.WriteLine("********menu**********");
-            Console.WriteLine("     1.Create");
-            Console.WriteLine("     2.Read");
-            Console.WriteLine("     3.Update");
-            Console.WriteLine("     4.Delete ");
-            Console.WriteLine("     0.Go Back");
+            Console.WriteLine("*     1.Create       *");
+            Console.WriteLine("*     2.Read         *");
+            Console.WriteLine("*     3.Update       *");
+            Console.WriteLine("*     4.Delete       *");
+            Console.WriteLine("*     0.Go Back      *");
             Console.WriteLine("**********************");
             Console.WriteLine();
         }
@@ -40,25 +40,25 @@ namespace assignmentt
                 case '1':
                     Console.Clear();
                     Console.WriteLine(".....Create.....");
-                    //assignmentt.Program.todo(1);
+                    
                     break;
 
                 case '2':
                     Console.Clear();
                     Console.WriteLine("....Read.....");
-                    //assignmentt.Program.todo(2);
+                    
                     break;
 
                 case '3':
                     Console.Clear();
                     Console.WriteLine(".....Update.....");
-                    //assignmentt.Program.todo(3);
+                    
                     break;
 
                 case '4':
                     Console.Clear();
                     Console.WriteLine(".....Delete.....");
-                    //assignmentt.Program.todo(4);
+                    
                     break;
 
                 default:

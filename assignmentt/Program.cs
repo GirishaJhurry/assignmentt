@@ -21,7 +21,7 @@ namespace assignmentt
             Console.WriteLine();
         }*/
 
-        public static void todo(int option)
+        /*public static void todo(int option)
         {
             string filepath;
             StreamReader reader = null;
@@ -72,7 +72,7 @@ namespace assignmentt
                 }
             }
 
-        }
+        }*/
 
         public static void Main(string[] args)
         {
@@ -115,7 +115,7 @@ namespace assignmentt
         }
     }
 }
-            /*while (true)
+/*while (true)
             {
                 Loop:
                 Console.WriteLine("Are the admin or guest? enter a for admin or g for guest:");
