@@ -30,40 +30,40 @@ namespace assignmentt
                 Menu_for_Guest();    
             }          
         } 
-        public static void todo(int option)
+        public static void todo(char option)
         {
             string filepath;
             StreamReader reader = null;
-            if (option == 1)
+            if (option == '1')
             {
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\experience.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\exp.csv";
                 //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\exp.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\exp.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\exp.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\experience.csv";
             }
-            else if (option == 2)
+            else if (option == '2')
             {
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\education.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\edu.csv";
                 //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\edu.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\edu.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\edu.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\education.csv";
             }
-            else if (option == 3)
+            else if (option == '3')
             {
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\skills.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\skills.csv";
-                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\skills.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\skills.csv";
+                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\skills.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\skills.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\skills.csv";
             }
-            else if (option == 4)
+            else if (option == '4')
             {
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\techskills.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\techskills.csv";
-                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\techskills.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\techskills.csv";
+                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\techskills.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\techskills.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\techskills.csv";
             }
             else
@@ -71,7 +71,7 @@ namespace assignmentt
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\contact.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\contact.csv";
                 //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\contact.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\contact.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\contact.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\contact.csv";
             }
 
@@ -107,35 +107,35 @@ namespace assignmentt
                     Console.Clear();
                     Console.WriteLine(".....Experience.....");
                     //assignmentt.Program.todo(1);
-                    todo(1);
+                    todo('1');
                     break;
 
                 case '2':
                     Console.Clear();
                     Console.WriteLine("....Education/training.....");
                     //assignmentt.Program.todo(2);
-                    todo(2);
+                    todo('2');
                     break;
 
                 case '3':
                     Console.Clear();
                     Console.WriteLine(".....skills.....");
                     //assignmentt.Program.todo(3);
-                    todo(3);
+                    todo('3');
                     break;
 
                 case '4':
                     Console.Clear();
                     Console.WriteLine(".....technological skills.....");
                     //assignmentt.Program.todo(4);
-                    todo(4);
+                    todo('4');
                     break;
 
                 case '5':
                     Console.Clear();
                     Console.WriteLine("......Contact.....");
                     //assignmentt.Program.todo(5);
-                    todo(5);
+                    todo('5');
                     break;
 
                 default:
