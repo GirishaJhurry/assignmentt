@@ -38,35 +38,40 @@ namespace assignmentt
             {
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\experience.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\exp.csv";
-                filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\exp.csv";
+                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\exp.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\exp.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\experience.csv";
             }
             else if (option == 2)
             {
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\education.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\edu.csv";
-                filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\edu.csv";
+                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\edu.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\edu.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\education.csv";
             }
             else if (option == 3)
             {
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\skills.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\skills.csv";
-                filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\skills.csv";
+                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\skills.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\skills.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\skills.csv";
             }
             else if (option == 4)
             {
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\techskills.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\techskills.csv";
-                filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\techskills.csv";
+                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\techskills.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\techskills.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\techskills.csv";
             }
             else
             {
                 //filepath = @"C:\Users\CORELAB-USER\Desktop\contact.csv";
                 //filepath = @"C:\Users\girisha\OneDrive\Desktop\contact.csv";
-                filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\contact.csv";
+                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\contact.csv";
+                filepath = @"C:\Users\girisha\source\repos\trial\contact.csv";
                 //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\contact.csv";
             }
 
