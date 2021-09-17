@@ -40,7 +40,7 @@ namespace assignmentt
                 case '1':
                     Console.Clear();
                     Console.WriteLine(".....Creating A New CSV file.....");
-                    string csvpath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\new.csv";
+                    string csvpath = "new.csv";
                     StringBuilder csvcontent = new StringBuilder();
                     Console.WriteLine("enter data in:");
                     string data = Convert.ToString(Console.ReadLine());
@@ -98,43 +98,23 @@ namespace assignmentt
             string filepath;
             if (option == '1')
             {
-                //filepath = @"C:\Users\CORELAB-USER\Desktop\experience.csv";
-                //filepath = @"C:\Users\girisha\OneDrive\Desktop\exp.csv";
-                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\exp.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\exp.csv";
-                //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\experience.csv";
-            }
+                filepath = "exp.csv";
+                }
             else if (option == '2')
             {
-                //filepath = @"C:\Users\CORELAB-USER\Desktop\education.csv";
-                //filepath = @"C:\Users\girisha\OneDrive\Desktop\edu.csv";
-                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\edu.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\edu.csv";
-                //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\education.csv";
-            }
+                filepath = "edu.csv";
+                }
             else if (option == '3')
             {
-                //filepath = @"C:\Users\CORELAB-USER\Desktop\skills.csv";
-                //filepath = @"C:\Users\girisha\OneDrive\Desktop\skills.csv";
-                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\skills.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\skills.csv";
-                //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\skills.csv";
+                filepath = "skills.csv";
             }
             else if (option == '4')
             {
-                //filepath = @"C:\Users\CORELAB-USER\Desktop\techskills.csv";
-                //filepath = @"C:\Users\girisha\OneDrive\Desktop\techskills.csv";
-                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\techskills.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\techskills.csv";
-                //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\techskills.csv";
+                filepath = "techskills.csv";
             }
             else
             {
-                //filepath = @"C:\Users\CORELAB-USER\Desktop\contact.csv";
-                //filepath = @"C:\Users\girisha\OneDrive\Desktop\contact.csv";
-                //filepath = @"C:\Users\girisha\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\contact.csv";
-                filepath = @"C:\Users\girisha\source\repos\trial\assignmentt\bin\Debug\netcoreapp3.1\contact.csv";
-                //filepath = @"C: \Users\CORELAB - USER\source\repos\assignmentt\assignmentt\bin\Debug\netcoreapp3.1\contact.csv";
+                filepath = "contact.csv";
             }
             return filepath;
         }
@@ -161,6 +141,21 @@ namespace assignmentt
                 {
                     String[] values = line.Split(',');
                     int count = values.GetLength(0);
+
+                 /* while (!reader.EndOfStream)
+                    {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+                    foreach (var item in values)
+                    {
+                        listA.Add(item);
+                    }
+                    foreach (var coloumn1 in listA)
+                    {
+                        Console.WriteLine(coloumn1);
+                    }
+
+                    }*/
 
                     for (int i = 0; i < count; i++)
                     {
