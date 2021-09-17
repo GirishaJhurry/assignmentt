@@ -145,11 +145,23 @@ namespace assignmentt
                 string[] values = lines[0].Split(",");
                 for (int i = 0; i < values.Length; i++) 
                 {
-                    for (int j = 1; j < (values.Length + 1); j++)
-                    {
-                        Console.WriteLine(j + values[i]);
-                    }
-                }   
+                        Console.WriteLine( i + ". " + values[i]);
+                }
+
+                Console.WriteLine("enter the number you want to delete:");
+                int searchid = Convert.ToInt32(Console.ReadLine());
+
+                string[] ZafrKiEna = File.ReadAllText(csvpath).Split(new char[] { ',' });
+                StringBuilder ObjStringBuilder = new StringBuilder();
+                
+                for (int i = 0; i <=values.Length; i++)
+                {
+                    if (ZafrKiEna[i].Contains(ZafrKiEna[searchid]))
+                        continue;
+                    ObjStringBuilder.Append(values[i] + ",");
+                }
+                ObjStringBuilder.ToString().Remove(ObjStringBuilder.Length - 1);
+                File.WriteAllText(csvpath, ObjStringBuilder.ToString());
             }
         }
         
