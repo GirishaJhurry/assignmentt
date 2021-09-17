@@ -39,20 +39,12 @@ namespace assignmentt
 
                 case '1':
                     Console.Clear();
-                    Console.WriteLine(".....Creating A New CSV file.....");
-                    string csvpath = "new.csv";
-                    StringBuilder csvcontent = new StringBuilder();
-                    Console.WriteLine("enter data in:");
-                    string data = Convert.ToString(Console.ReadLine());
 
-                    string[] words = data.Split(',');
-                    int count = words.GetLength(0);
+                    Console.WriteLine(".....Inserting CSV file.....");
+                    Guest.Menu_for_Guest();                
 
-                    for (int index = 0; index < count; index++)
-                        csvcontent.AppendLine(words[index]);
+                    Adding_in_file();
 
-                    File.WriteAllText(csvpath, csvcontent.ToString());
-                    //File.AppendAllText(csvpath, csvcontent.ToString());
                     break;
 
                 case '2':
@@ -73,17 +65,16 @@ namespace assignmentt
                     Guest.Menu_for_Guest();
                     Console.Write("File:");
                     option = Console.ReadLine()[0];
-                    Updating(option);
+                    //Updating(option);
                     break;
 
                 case '4':
                     Console.Clear();
                     Console.WriteLine(".....Deleting.....");
-                    Console.Write("Please select the file you wish to delete data");
                     Guest.Menu_for_Guest();
-                    Console.Write("File:");
-                    option = Console.ReadLine()[0];
-                    Deleting(option);
+
+
+                    Deleting();
 
                     break;
 
@@ -98,7 +89,7 @@ namespace assignmentt
             string filepath;
             if (option == '1')
             {
-                filepath = "exp.csv";
+                filepath = "experience.csv";
                 }
             else if (option == '2')
             {
@@ -118,33 +109,53 @@ namespace assignmentt
             }
             return filepath;
         }
-        public static void Updating(char option)
+
+        public static void Adding_in_file() 
         {
-            StreamReader reader = null;
-            string filepath = Finding_Filepath(option);
+            Console.WriteLine("enter the file you want to insert into:");
+            char option = Console.ReadLine()[0];
+            string csvpath = Finding_Filepath(option);
+           
 
-            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
-            reader = new StreamReader(File.OpenRead(filepath));
-            StringBuilder newword = new StringBuilder();
-            List<string> listA = new List<string>();
-
-            if (File.Exists(filepath))
+            var csvcontent = new StringBuilder();
+            
+            if (File.Exists(csvpath))
             {
-                Console.Write("enter the detail you want to update: ");
-                string searchtext = Console.ReadLine();
+                Console.WriteLine(csvpath);
+         
+                Console.Write("enter data in:");
+                
+                string  data = Convert.ToString(Console.ReadLine());
+                Console.WriteLine(data);
 
-                Console.Write("enter the new detail: ");
-                string updatedword = Console.ReadLine();
+                File.AppendAllText(csvpath, $",{data}");
 
-                string line;
-                while ((line = reader.ReadLine()) != null)
+            }
+        }
+
+        public static void Deleting()
+        {
+            Console.WriteLine("enter the file you want to delete:");
+            char option = Console.ReadLine()[0];
+            string csvpath = Finding_Filepath(option);
+
+            if (File.Exists(csvpath))
+            {
+                var lines = File.ReadAllLines(csvpath);
+                string[] values = lines[0].Split(",");
+                for (int i = 0; i < values.Length; i++) 
                 {
-                    String[] values = line.Split(',');
-                    int count = values.GetLength(0);
-
-                 /* while (!reader.EndOfStream)
+                    for (int j = 1; j < (values.Length + 1); j++)
                     {
-                    var line = reader.ReadLine();
+                        Console.WriteLine(j + values[i]);
+                    }
+                }   
+            }
+        }
+        
+        /* 
+                    {
+                    
                     var values = line.Split(',');
                     foreach (var item in values)
                     {
@@ -155,7 +166,7 @@ namespace assignmentt
                         Console.WriteLine(coloumn1);
                     }
 
-                    }*/
+                    }*//*
 
                     for (int i = 0; i < count; i++)
                     {
@@ -170,13 +181,13 @@ namespace assignmentt
                         for (int index = 0; index < count; index++)
                             newword.AppendLine(values[index]);
 
-                        //File.WriteAllText(filepath, newword.ToString());
+                        //
                     }
                 }
             }
 
-        }
-        public static void Deleting(char option)
+        }*/
+       /* public static void Deleting(char option)
         {
             string filepath = Finding_Filepath(option);
 
@@ -208,7 +219,7 @@ namespace assignmentt
                 Console.WriteLine("pan kapav");
             }
 
-        }
+        }*/
     }
 }
 

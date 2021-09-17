@@ -33,7 +33,7 @@ namespace assignmentt
         public static void todo(char option)
         {
             string filepath;
-            StreamReader reader = null;
+            //StreamReader reader = null;
             if (option == '1')
             {
                 filepath = "experience.csv";
@@ -57,23 +57,14 @@ namespace assignmentt
            
             if (File.Exists(filepath))
             {
-                
-                reader = new StreamReader(File.OpenRead(filepath));
-                List<string> listA = new List<string>();
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-                    foreach (var item in values)
-                    {
-                        listA.Add(item);
-                    }
-                    foreach (var coloumn1 in listA)
-                    {
-                        Console.WriteLine(coloumn1);
-                    }
 
-                }
+                var lines = File.ReadAllLines(filepath);
+               
+                string[] values = lines[0].Split(",");
+
+                for (int i = 0; i < values.Length; i++)
+                    Console.WriteLine(values[i]);
+
             }
 
         }
